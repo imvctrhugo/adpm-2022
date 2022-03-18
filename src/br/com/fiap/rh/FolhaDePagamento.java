@@ -13,4 +13,9 @@ public class FolhaDePagamento {
 		return pagamentoTotal;
 	}
 
+	public void logar(Autenticavel funcionario) {
+		System.out.println(funcionario.autenticar("123456"));
+
+	}
+
 }

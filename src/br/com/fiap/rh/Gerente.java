@@ -1,9 +1,21 @@
 package br.com.fiap.rh;
 
-public class Gerente extends Empregado {
+public class Gerente extends Empregado implements Autenticavel {
 
 	private String area;
 	private double bonus;
+	private String senha;
+
+	@Override
+	public void setSenha(String senha) {
+		this.senha = senha;
+
+	}
+
+	@Override
+	public boolean autenticar(String senha) {
+		return this.senha == senha;
+	}
 
 	public String getArea() {
 		return area;

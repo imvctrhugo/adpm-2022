@@ -32,6 +32,16 @@ public class Empresa {
 		folhaDePagamento.registrar(presidenteRegional);
 		System.out.println("Pagamento Total = " + folhaDePagamento.getPagamentoTotal());
 
+		gerente.setSenha("123");
+		folhaDePagamento.logar(gerente);
+
+		presidente.setSenha("123456");
+		folhaDePagamento.logar(presidente);
+
+		Cliente cliente = new Cliente();
+		cliente.setSenha("minhaSenha");
+		folhaDePagamento.logar(cliente);
+
 	}
 
 }
